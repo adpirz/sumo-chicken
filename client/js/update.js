@@ -106,7 +106,7 @@ var update = function(){
       if (!dashButton.isDown)
         player.animations.play('walking');
     } else {
-      player.frame = 0;
+      player.animations.play('standing');
     }
 
     // Change animation speed
@@ -175,12 +175,12 @@ var addAnimations = function(chicken) {
     if (chicken.children.length > 0) chicken.children[0].scale.x = mathSign > 0 ? -1 : 1;
   }
   if (chicken.body.velocity.y !== 0) {
-    chicken.animations.stop();
-    chicken.frame = 24;
+    // chicken.animations.stop();
+    chicken.animations.play('standing');
   } else if (chicken.body.velocity.x !== 0) {
     chicken.animations.play(chicken.dashing ? 'flying' : 'walking');
   } else {
-    chicken.frame = 0;
+    chicken.animations.play('standing');
   }
 };
 

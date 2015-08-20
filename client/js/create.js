@@ -258,8 +258,9 @@ var createHearts = function(gameHearts){
     var deadHeart = hearts.filter(function(heart){
       return heartID === heart.id;
     });
-    
+
     console.log(deadHeart);
+    deadHeart.removeChildAt(0);
 
   });
   scoreTextHeart = game.add.bitmapText(0, 0, 'carrier_command', 'collected: 0', 30);

@@ -19,7 +19,7 @@ Player = function(game, x, y, socketId) {
   this.paused = false;
   this.hasNameLabel = false;
 
-  Phaser.Sprite.call(this, game, x, y, 'chicken');
+  Phaser.Sprite.call(this, game, x, y, 'puppy');
 
   // create physics
   game.physics.arcade.enable(this);
@@ -27,9 +27,9 @@ Player = function(game, x, y, socketId) {
 
   // create animations and graphics
   this.anchor.setTo(0.5, 0.5);
-  this.animations.add('walking', [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], 10, true);
-  this.animations.add('flying', [18, 19, 20, 21, 22, 23], 10, true);
-  this.animations.add('pecking', [0, 1, 2, 3, 4, 5]);
+  this.animations.add('walking', [3,4,5], 5, true);
+  this.animations.add('flying', [3,4,5], 2, true);
+  this.animations.add('standing', [9,10,11], 5, true);
   
   this.scale.setTo(2, 2);
   this.body.setSize(this.body.width - 16, 
@@ -91,7 +91,7 @@ Player = function(game, x, y, socketId) {
 
     } else {
       if (this.body.touching.down) {
-        this.frame = 0;
+        // this.frame = 0;
       }
     }
   };
@@ -117,18 +117,18 @@ Player = function(game, x, y, socketId) {
   };
 
   this.chargeDash = function() {
-    if (this.dashMeter < dashMax / 3) {
-      this.dashMeter += 6; 
-      this.tint = 0xffffff;     
-    } else if (this.dashMeter < dashMax * 2 / 3) {
-      this.dashMeter += 4;
-      this.tint = 0xffccff;     
-    } else if (this.dashMeter < dashMax) {
-      this.dashMeter += 2;
-      this.tint = 0xff99ff;     
-    } else {
-      this.tint = 0xff66ff;
-    }
+    // if (this.dashMeter < dashMax / 3) {
+    //   this.dashMeter += 6; 
+    //   this.tint = 0xffffff;     
+    // } else if (this.dashMeter < dashMax * 2 / 3) {
+    //   this.dashMeter += 4;
+    //   this.tint = 0xffccff;     
+    // } else if (this.dashMeter < dashMax) {
+    //   this.dashMeter += 2;
+    //   this.tint = 0xff99ff;     
+    // } else {
+    //   this.tint = 0xff66ff;
+    // }
   };
 
   // level is an integer that starts at 0

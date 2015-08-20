@@ -9,6 +9,8 @@ var preload = function(){
   game.load.image('background', 'assets/forest.png');
   game.load.image('lava', 'assets/lava.png'); // lava sourced from: http://walen.se/sprites/?level=picture&id=969
   game.load.image('heart', 'assets/Heart.png');
+  // Puppy: 96, 128;
+  game.load.spritesheet('puppy', 'assets/brown_puppy.png', 32, 32);
 
   game.stage.smoothed = false;
 
