@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sumo Chicken</title>  
+    <title>Sumo Chicken Redux</title>  
     <link rel="stylesheet" href="styles/style.css">
     <script src="lib/phaser/build/phaser.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -11,7 +11,7 @@
   <body>
     <script src="build.js"></script>
     <div id="main">
-      <h1 class="header red">SUMO CHICKEN</h1>
+      <h1 class="header red">SUMO CHICKEN REDUX</h1>
       <span class="chickpic-right"><img id='left'src="assets/chickenlogo_360_right.png"></span>
       <span class="chickpic-left"><img id='right' src="assets/chickenlogo_360.png"></span>
       
@@ -23,15 +23,15 @@
         <div><input class="glowing-border" type="text" id="username"></input></div>
         <p><b>Choose a Game Mode:</b></p>
         <div id="gameMode">
-        <label class="blue"><a><input  type="radio" name="game-mode" value="Classic" checked><span id="classic">Classic</span></a></label>
-        <label class="blue"><a><input  type="radio" name="game-mode" value="Kill Count"><span id="kill">Kill Count</span></a></label>
-        <label class="blue"><a><input  type="radio" name="game-mode" value="Hearts"><span id="hearts">Hearts</span></a></label>
-        <div>
-        <div><input class="submitButton" type="submit" value="play the game"></input></div>
+          <label class="blue"><a><input  type="radio" name="game-mode" value="Classic" checked><span id="classic">Classic</span></a></label>
+          <label class="blue"><a><input  type="radio" name="game-mode" value="Kill Count"><span id="kill">Kill Count</span></a></label>
+          <label class="blue"><a><input  type="radio" name="game-mode" value="Hearts"><span id="hearts">Hearts</span></a></label>
+          </div>
+        <div><input class="submit-button" type="submit" value="play the game"></input></div>
       </form> 
       <a href="aboutUs.html"><p>About Us</p></a>
        </div>
-    <div>
+    </div>
 
     <script type="text/javascript">
     $(document).ready(function() {
